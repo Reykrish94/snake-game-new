@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Snake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hud">
+      <div>
+        <p class="eyebrow">Cyber Grid</p>
+        <h1>Neon Snake</h1>
+      </div>
+      <div class="stats">
+        <div class="stat-card">
+          <span class="label">Player</span>
+          <strong id="playerNameDisplay">Guest</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="label">Speed</span>
+          <strong id="speed">1</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="play-area">
+      <div class="scanlines" aria-hidden="true"></div>
+      <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game area"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="panel">
+          <p class="panel-kicker">Press Space To Begin</p>
+          <h2 id="overlayTitle">Boot Sequence Ready</h2>
+          <p id="overlayMessage">Use arrow keys or WASD to steer the snake. Every 3 points increases the speed.</p>
+          <label class="field" id="nameField">
+            <span class="field-label">Player Name</span>
+            <input id="playerNameInput" type="text" maxlength="16" placeholder="Enter your alias" autocomplete="off">
+          </label>
+          <button id="startButton" type="button">Start Run</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard">
+      <div class="leaderboard-header">
+        <div>
+          <p class="eyebrow">Hall Of Neon</p>
+          <h2>Top Players</h2>
+        </div>
+      </div>
+      <ol id="leaderboardList" class="leaderboard-list"></ol>
+    </section>
+
+    <section class="mobile-controls" aria-label="Touch controls">
+      <button class="touch-btn up" type="button" data-direction="up" aria-label="Move up">▲</button>
+      <div class="touch-middle">
+        <button class="touch-btn left" type="button" data-direction="left" aria-label="Move left">◀</button>
+        <button class="touch-btn action" type="button" data-action="pause" aria-label="Pause or resume game">II</button>
+        <button class="touch-btn right" type="button" data-direction="right" aria-label="Move right">▶</button>
+      </div>
+      <button class="touch-btn down" type="button" data-direction="down" aria-label="Move down">▼</button>
+    </section>
+
+    <section class="controls">
+      <span>Move: W A S D / Arrow Keys</span>
+      <span>Pause: P</span>
+      <span>Restart: Space</span>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
