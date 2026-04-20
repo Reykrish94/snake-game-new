@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.port": 5507,
+  "liveServer.settings.root": "/",
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/.git/**"
+  ]
+}
